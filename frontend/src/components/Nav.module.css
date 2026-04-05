@@ -1,0 +1,112 @@
+@media only screen and (min-width: 600px) {
+  .nav {
+    background-color: #CC5500;
+    z-index: 2;
+    padding: 36px;
+  }
+
+  .ul {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    column-gap: 4rem;
+  }
+
+  .li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.125em;
+  }
+
+  .a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.7em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .active {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    text-decoration: none;
+    color: grey;
+  }
+
+  .mobile_ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ul {
+    display: none;
+  }
+
+  .nav {
+    background-color: #CC5500;
+    padding: 24px 0;
+  }
+
+  .ul.is_open {
+    display: flex;
+    background-color: #CC5500;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    padding: 24px 0;
+    gap: 2rem;
+    z-index: 2;
+  }
+
+  .li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo_span {
+    font-family: "Great_Vibes";
+    text-decoration: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    letter-spacing: 0.5em;
+    color: white;
+  }
+
+  .a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+
+  .active {
+    color: grey;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  .mobile_ul {
+    display: flex;
+    background-color: #CC5500;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .mobile_li {
+    padding: 0 12px;
+    list-style-type: none;
+    letter-spacing: 0.2rem;
+    display: flex;
+    align-items: center;
+  }
+}
