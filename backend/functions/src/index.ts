@@ -9,7 +9,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*", // allow all for now (we can tighten later)
+    origin: "https://gamos-vasiliki.vercel.app", // allow all for now (we can tighten later)
+    credentials: true,
   })
 );
 
