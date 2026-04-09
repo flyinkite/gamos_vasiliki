@@ -1,17 +1,44 @@
 .wrapper {
   max-width: 768px;
   margin: 0 auto;
-  color: #8f4600;
-  text-shadow: 0 0 1px #000;
-  height: 100%;
+  padding: 20px;
 }
 
-.div {
-  height: 100%;
+/* Card container */
+.card {
+  background: #fffaf5;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  gap: 2rem;
-  padding: 24px 68px;
+  gap: 30px;
+}
+
+/* Sections */
+.section {
+  text-align: center;
+}
+
+/* Titles */
+.title {
+  font-family: 'MiamaLocal', cursive;
+  font-size: 2.2rem;
+  color: #b45309;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.text {
+  font-family: 'Lora', serif;
+  color: #7c3f00;
+  margin-bottom: 5px;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 12px;
+  object-fit: cover;
 }

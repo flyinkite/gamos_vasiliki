@@ -6,30 +6,28 @@ import classNames from "classnames";
 
 export const Nav = () => {
   const routes = [
-    { label: "Home", path: "/" },
-    { label: "Information", path: "/information" },
+    { label: "Αρχική", path: "/" },
+    { label: "Πληροφορίες", path: "/information" },
     { label: "RSVP", path: "/rsvp" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
   return (
     <nav className={navStyle.nav}>
-      <ul className={navStyle.mobile_ul}>
-        <li className={classNames(navStyle.mobile_li, navStyle.img)}>
-          <NavLink className={navStyle.logo} to="/">
-            A<span className={navStyle.logo_span}>&</span>G
-          </NavLink>
-        </li>
-        <li className={navStyle.mobile_li} onClick={toggleMenu}>
-          <GiHamburgerMenu />
-        </li>
-      </ul>
+      
+      {/* Top bar */}
+      <div className={navStyle.topBar}>
+        <NavLink className={navStyle.logo} to="/">
+          Β<span>&</span>Σ
+        </NavLink>
 
+        <div className={navStyle.menuIcon} onClick={() => setIsOpen(!isOpen)}>
+          <GiHamburgerMenu />
+        </div>
+      </div>
+
+      {/* Menu */}
       <ul
         className={classNames(navStyle.ul, {
           [navStyle.is_open]: isOpen,
@@ -39,9 +37,9 @@ export const Nav = () => {
           <li key={route.path} className={navStyle.li}>
             <NavLink
               to={route.path}
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
-                classNames(navStyle.a, {
+                classNames(navStyle.link, {
                   [navStyle.active]: isActive,
                 })
               }

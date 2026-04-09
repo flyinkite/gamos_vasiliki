@@ -1,28 +1,26 @@
-import classNames from "classnames";
 import footerStyle from "./Footer.module.css";
+
 export const Footer = () => {
   return (
-    <>
-      <footer className={classNames(`${footerStyle.footer}`)}>
-        <nav className={footerStyle.nav}>
-          <ul className={footerStyle.footer_ul}>
-            <li className={footerStyle.footer_li}>
-              <a className={footerStyle.footer_a} href="#">
-                Βασιλική
-              </a>
-            </li>
-            <li className={footerStyle.footer_li}>
-              <img src="/footerFlower.svg" alt="Wedding logo" />
-            </li>
+    <footer className={footerStyle.footer}>
+      <div className={footerStyle.container}>
+        
+        {/* Names */}
+        <div className={footerStyle.names}>
+          <span>Βασιλική</span>
+          <span className={footerStyle.and}>&</span>
+          <span>Στάθης</span>
+        </div>
 
-            <li className={footerStyle.footer_li}>
-              <a className={footerStyle.footer_a} href="#">
-                Στάθης
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </>
+        {/* Decorative line */}
+        <div className={footerStyle.divider}></div>
+
+        {/* Optional small text */}
+        <p className={footerStyle.note}>
+          Με αγάπη σας περιμένουμε
+        </p>
+
+      </div>
+    </footer>
   );
 };

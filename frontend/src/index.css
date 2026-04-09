@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,31 @@
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: local("Roboto"), url(./fonts/Roboto/Roboto-Black.ttf) format("trueType");
+  font-family: "MiamaLocal";
+  src: url("./fonts/Miama/Miama.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: "Great_Vibes";
-  src: local("Great_Vibes"),
-    url(./fonts/Great_Vibes/GreatVibes-Regular.ttf) format("trueType");
+/* Base typography */
+body {
+  font-family: 'Lora', serif;
+  color: #2c2c2c;
+  line-height: 1.6;
+  background-color: #fffaf5; /* soft elegant background */
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'MiamaLocal', cursive;
+  font-weight: normal;
+  color: #b45309; /* burnt orange tone */
+}
+
+h1, h2 {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3.5rem;
 }

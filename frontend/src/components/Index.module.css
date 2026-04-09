@@ -7,9 +7,9 @@
   flex-direction: column;
   gap: 2rem;
   margin: 0 auto;
-  text-shadow: 0 0 1px #000;
-  color: #ffdfbf;
-  font-weight: 800;
+
+  color: #7c3f00; /* warm brown instead of pale orange */
+  font-weight: 400; /* lighter = more elegant */
   z-index: 2;
 }
 
@@ -21,15 +21,17 @@
 }
 
 .p_header {
-  font-size: 2vw;
-  letter-spacing: 0.2em;
+  font-family: 'MiamaLocal', cursive;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #b45309;
 }
+
 .p {
   text-align: center;
-  letter-spacing: 0.1em;
-  font-size: 1vw;
-  z-index: 1;
-  max-width: 368px;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  max-width: 500px;
 }
 
 .date {
@@ -42,20 +44,19 @@
   letter-spacing: 0.1em;
 }
 
-.span {
-  font-family: "Great_Vibes";
-  font-weight: 400;
-  font-style: normal;
-}
-
 .button {
   z-index: 2;
-  border: 1px solid #ffdfbf;
-  padding: 0.6rem 3rem;
-
-  border-radius: 0.5rem;
+  border: 1px solid #b45309;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
   text-decoration: none;
-  color: #ffdfbf;
+  color: #b45309;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #b45309;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
