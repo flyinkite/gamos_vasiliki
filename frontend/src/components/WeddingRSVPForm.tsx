@@ -12,7 +12,7 @@ export const WeddingRSVPForm = () => {
 
   const [guestNames, setGuestNames] = useState<string[]>([]);
 
-  const [hasAllergy, setHasAllergy] = useState(false);
+  const [hasAllergy, setHasAllergy] = useState<boolean | null>(null);
   const [allergyDetails, setAllergyDetails] = useState("");
 
   const [diet, setDiet] = useState("");
@@ -192,16 +192,24 @@ export const WeddingRSVPForm = () => {
             <label className={WeddingRSVPFormStyle.label}>
               Έχετε κάποια αλλεργία;
             </label>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <label className={WeddingRSVPFormStyle.customRadio}>
+                <input
+                  type="radio"
+                  onChange={() => setHasAllergy(true)}
+                />
+                <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
+              </label>
 
-            <label className={WeddingRSVPFormStyle.customRadio}>
-              <input
-                type="checkbox"
-                onChange={(e) => setHasAllergy(e.target.checked)}
-              />
-              <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
-            </label>
-
-            {hasAllergy && (
+              <label className={WeddingRSVPFormStyle.customRadio}>
+                <input
+                  type="radio"
+                  onChange={() => setHasAllergy(false)}
+                />
+                <div className={WeddingRSVPFormStyle.radioButton}>Όχι</div>
+              </label>
+            </div>
+            {hasAllergy === true && (
               <input
                 className={WeddingRSVPFormStyle.input}
                 placeholder="Παρακαλώ αναφέρετε"
