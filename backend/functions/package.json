@@ -3,7 +3,9 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
     "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
-    "vercel-build": "NODE_ENV=production echo hello World"
+    "vercel-build": "NODE_ENV=production echo hello World",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "engines": {
     "node": "18"
