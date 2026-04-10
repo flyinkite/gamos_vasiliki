@@ -84,6 +84,7 @@
 @media only screen and (max-width: 600px) {
   .wrapper {
     max-width: 90%;
+    padding-top: 28%;
   }
 
   .svgFrame {
