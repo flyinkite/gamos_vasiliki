@@ -9,13 +9,22 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://gamos-vasiliki.vercel.app", // allow all for now (we can tighten later)
+    origin: "https://gamos-vasiliki.vercel.app",
     credentials: true,
   })
 );
 
 app.use(express.json());
 
+app.get("/api/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+  });
+});
+
+/* Your existing routes */
 app.use("/", router);
 
 const PORT = process.env.PORT || 3000;
