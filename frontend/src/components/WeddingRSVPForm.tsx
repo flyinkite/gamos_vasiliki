@@ -150,20 +150,27 @@ export const WeddingRSVPForm = () => {
 
           {/* Guests */}
           <div className={WeddingRSVPFormStyle.section}>
-            <label className={WeddingRSVPFormStyle.label}>
-              Αριθμός ενηλίκων
-            </label>
-            <input
-              type="number"
-              min="0"
-              className={WeddingRSVPFormStyle.input}
-              value={adults}
-              onChange={(e) => {
-                const val = Number(e.target.value);
-                setAdults(val);
-                updateGuestNames(val + children);
-              }}
-            />
+            <div className={WeddingRSVPFormStyle.counter}>
+              <label className={WeddingRSVPFormStyle.label}>
+                Αριθμός ενηλίκων
+              </label>
+
+              <div className={WeddingRSVPFormStyle.counterControls}>
+                <button type="button" onClick={() => {
+                  const val = Math.max(0, adults - 1);
+                  setAdults(val);
+                  updateGuestNames(val + children);
+                }}>−</button>
+
+                <span>{adults}</span>
+
+                <button type="button" onClick={() => {
+                  const val = adults + 1;
+                  setAdults(val);
+                  updateGuestNames(val + children);
+                }}>+</button>
+              </div>
+            </div>
 
             <label className={WeddingRSVPFormStyle.label}>
               Αριθμός παιδιών

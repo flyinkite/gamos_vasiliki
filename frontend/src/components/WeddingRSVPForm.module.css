@@ -23,7 +23,7 @@ body {
   font-family: 'MiamaLocal', cursive;
   font-size: 2rem;
   letter-spacing: 0.1em;
-  color: #b45309;
+  color: #8f4600;
 }
 
 .p {
@@ -44,22 +44,73 @@ body {
 .label {
   font-weight: 500;
   margin-top: 10px;
+  color: #8f4600;
 }
 
 .submitButton {
-  width: 100%;
-  height: 45px;
-  border-radius: 10px;
-  border: none;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #d97706;
+
+  background-color: white;
+  color: #8f4600;
+
+  font-size: 16px;
+  font-family: 'Lora', serif;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.submitButton:hover {
   background-color: #d97706;
   color: white;
-  font-size: 16px;
+}
+
+/* loading / disabled */
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.counterControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.counterControls button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  border: 1px solid #d97706;
+  background: white;
+  color: #8f4600;
+
+  font-size: 20px;
   cursor: pointer;
   transition: 0.2s ease;
 }
 
-.submitButton:hover {
-  background-color: #b45309;
+.counterControls button:hover {
+  background-color: #d97706;
+  color: white;
+}
+
+.counterControls span {
+  font-size: 18px;
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
 }
 
 .input {
@@ -93,6 +144,7 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease;
+  color: #8f4600;
 }
 
 .customRadio input[type="radio"]:checked + .radioButton {
