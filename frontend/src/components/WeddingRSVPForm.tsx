@@ -35,6 +35,18 @@ export const WeddingRSVPForm = () => {
       return alert("Παρακαλώ επιλέξτε αν θα παρευρεθείτε");
     }
 
+    if (!name.trim()) {
+      return alert("Παρακαλώ συμπληρώστε το όνομα");
+    }
+
+    if (!email.trim()) {
+      return alert("Παρακαλώ συμπληρώστε το email");
+    }
+
+    if (hasAllergy === true && !allergyDetails.trim()) {
+      return alert("Παρακαλώ συμπληρώστε την αλλεργία");
+    }
+
     setLoading(true);
 
     try {
@@ -192,10 +204,14 @@ export const WeddingRSVPForm = () => {
             <label className={WeddingRSVPFormStyle.label}>
               Έχετε κάποια αλλεργία;
             </label>
+
             <div style={{ display: "flex", gap: "10px" }}>
               <label className={WeddingRSVPFormStyle.customRadio}>
                 <input
                   type="radio"
+                  name="allergy"
+                  value="yes"
+                  checked={hasAllergy === true}
                   onChange={() => setHasAllergy(true)}
                 />
                 <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
@@ -204,11 +220,15 @@ export const WeddingRSVPForm = () => {
               <label className={WeddingRSVPFormStyle.customRadio}>
                 <input
                   type="radio"
+                  name="allergy"
+                  value="no"
+                  checked={hasAllergy === false}
                   onChange={() => setHasAllergy(false)}
                 />
                 <div className={WeddingRSVPFormStyle.radioButton}>Όχι</div>
               </label>
             </div>
+
             {hasAllergy === true && (
               <input
                 className={WeddingRSVPFormStyle.input}
