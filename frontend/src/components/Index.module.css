@@ -1,5 +1,7 @@
 .wrapper {
-  height: 100%;
+  position: relative;
+  z-index: 1;
+
   max-width: 768px;
   display: flex;
   justify-content: center;
@@ -8,23 +10,43 @@
   gap: 2rem;
   margin: 0 auto;
 
-  color: #7c3f00; /* warm brown instead of pale orange */
-  font-weight: 400; /* lighter = more elegant */
-  z-index: 2;
+  color: #7c3f00;
+  font-weight: 400;
+
+  padding-top: 180px;
 }
 
-.svgMain {
-  background: url("/flower.svg");
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* SVG FRAME */
+.svgFrame {
   position: absolute;
-  width: 100vmin;
-  height: 100vmin;
+
+  width: 80vw;              /* bigger overall */
+  max-width: 600px;         /* prevents it from getting too huge */
+  aspect-ratio: 105 / 123.2;
+
+  background: url("/flower.svg") no-repeat center;
+  background-size: contain;
+
+  opacity: 0;               /* start hidden for animation */
+  z-index: 0;
+
+  animation: fadeInFrame 1.6s ease forwards;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
 }
 
 .p_header {
   font-family: 'MiamaLocal', cursive;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 0.1em;
-  color: #b45309;
+  color: #8f4600;
 }
 
 .p {
@@ -55,15 +77,32 @@
 }
 
 .button:hover {
-  background-color: #b45309;
+  background-color: #8f4600;
   color: white;
 }
 
 @media only screen and (max-width: 600px) {
   .wrapper {
-    max-width: 200px;
+    max-width: 90%;
   }
+
+  .svgFrame {
+    width: 85vw;
+    max-width: 380px;
+  }
+  
   .p {
-    font-size: 2vw;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInFrame {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 0.85;
+    transform: scale(1);
   }
 }
