@@ -15,11 +15,6 @@ export const Footer = () => {
         {/* Decorative line */}
         <div className={footerStyle.divider}></div>
 
-        {/* Optional small text */}
-        <p className={footerStyle.note}>
-          Με αγάπη σας περιμένουμε
-        </p>
-
       </div>
     </footer>
   );

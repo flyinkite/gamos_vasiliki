@@ -1,12 +1,18 @@
+.background {
+  background: url("/orange_flowers.svg") no-repeat center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
 .wrapper {
   max-width: 768px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 /* Card container */
 .card {
-  background: #fffaf5;
+  background: #ffdfbf;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -24,14 +30,14 @@
 .title {
   font-family: 'MiamaLocal', cursive;
   font-size: 2.2rem;
-  color: #b45309;
+  color: #CC5500;
   margin-bottom: 10px;
 }
 
 /* Text */
 .text {
   font-family: 'Lora', serif;
-  color: #7c3f00;
+  color: #8f4600;
   margin-bottom: 5px;
 }
 

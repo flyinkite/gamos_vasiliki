@@ -15,7 +15,6 @@ export const Index = () => {
       <Link className={indexStyle.button} to="/rsvp">
         Φόρμα
       </Link>
-      <svg className={indexStyle.svgMain}></svg>
     </div>
   );
 };

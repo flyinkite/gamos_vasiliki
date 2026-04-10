@@ -1,13 +1,13 @@
 .footer {
-  margin-top: 60px;
-  padding: 30px 20px;
+  margin-top: 15px;
+  padding: 10px 5px;
   background-color: #fffaf5;
   border-top: 1px solid #f1e4d8;
 }
 
 /* Container */
 .container {
-  max-width: 768px;
+  max-width: 890px;
   margin: 0 auto;
   text-align: center;
 }
@@ -31,10 +31,10 @@
 
 /* Divider line */
 .divider {
-  width: 60px;
+  width: 50px;
   height: 2px;
   background-color: #b45309;
-  margin: 15px auto;
+  margin: 10px auto;
   opacity: 0.6;
 }
 
