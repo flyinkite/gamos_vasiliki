@@ -48,3 +48,27 @@
   border-radius: 12px;
   object-fit: cover;
 }
+
+.mapWrapper {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.mapButton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #d97706;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.mapButton:hover {
+  background-color: #b45309;
+}
