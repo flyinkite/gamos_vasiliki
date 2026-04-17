@@ -10,7 +10,7 @@
   inset: 0;
 
   background: url("/orange_background_mobile.svg") no-repeat right center;
-  background-size: contain;
+  background-size: 100%;
   pointer-events: none;
   z-index: -1;
 }
