@@ -1,11 +1,25 @@
 .main {
-  max-width: 768px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("/orange_background_mobile.svg") no-repeat right center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .main::before {
+    background:url("/orange_background_desktop.svg") no-repeat right center;
+    background-size: 100%;
+  }
 }
 
 .outerWrapper {
