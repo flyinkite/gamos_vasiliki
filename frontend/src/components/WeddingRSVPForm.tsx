@@ -90,180 +90,184 @@ export const WeddingRSVPForm = () => {
 
   return (
     <div className={WeddingRSVPFormStyle.main}>
-      <div className={WeddingRSVPFormStyle.outerWrapper}>
-        <h1 className={WeddingRSVPFormStyle.h1}>Φόρμα</h1>
-        <p className={WeddingRSVPFormStyle.p}>
-          Παρακαλούμε απαντήστε έως 10/07/26
-        </p>
-      </div>
-
-      {submitted ? (
-        <p className={WeddingRSVPFormStyle.createdAt}>
-          <FaCheck /> Ευχαριστούμε! Η απάντησή σας καταχωρήθηκε
-        </p>
-      ) : (
-        <form className={WeddingRSVPFormStyle.form} onSubmit={handleSubmit}>
-
-          {/* Attendance */}
-          <div className={WeddingRSVPFormStyle.section}>
-            <label className={WeddingRSVPFormStyle.label}>
-              Θα παρευρεθείτε;
-            </label>
-
-            <div style={{ display: "flex", gap: "10px" }}>
-              <label className={WeddingRSVPFormStyle.customRadio}>
-                <input type="radio" name="attending" onChange={() => setAttending(true)} />
-                <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
-              </label>
-
-              <label className={WeddingRSVPFormStyle.customRadio}>
-                <input type="radio" name="attending" onChange={() => setAttending(false)} />
-                <div className={WeddingRSVPFormStyle.radioButton}>Όχι</div>
-              </label>
-            </div>
+      <div className={WeddingRSVPFormStyle.wrapper}>
+        <div className={WeddingRSVPFormStyle.card}>
+          <div className={WeddingRSVPFormStyle.outerWrapper}>
+            <h1 className={WeddingRSVPFormStyle.h1}>Φόρμα</h1>
+            <p className={WeddingRSVPFormStyle.p}>
+              Παρακαλούμε απαντήστε έως 10/07/26
+            </p>
           </div>
 
-          {/* Adults */}
-          {attending && (
-            <div className={WeddingRSVPFormStyle.section}>
-              <label className={WeddingRSVPFormStyle.label}>
-                Αριθμός ενηλίκων
-              </label>
+          {submitted ? (
+            <p className={WeddingRSVPFormStyle.createdAt}>
+              <FaCheck /> Ευχαριστούμε! Η απάντησή σας καταχωρήθηκε
+            </p>
+          ) : (
+            <form className={WeddingRSVPFormStyle.form} onSubmit={handleSubmit}>
 
-              <div className={WeddingRSVPFormStyle.counterControls}>
-                <button type="button" onClick={() => updateAdults(Math.max(0, adults - 1))}>−</button>
-                <span>{adults}</span>
-                <button type="button" onClick={() => updateAdults(adults + 1)}>+</button>
-              </div>
+              {/* Attendance */}
+              <div className={WeddingRSVPFormStyle.section}>
+                <label className={WeddingRSVPFormStyle.label}>
+                  Θα παρευρεθείτε;
+                </label>
 
-              {adultNames.map((name, i) => (
-                <div key={i}>
-                  <input
-                    className={WeddingRSVPFormStyle.input}
-                    placeholder={`Ονοματεπώνυμο #${i + 1}`}
-                    value={name}
-                    onChange={(e) => {
-                      const newArr = [...adultNames];
-                      newArr[i] = e.target.value;
-                      setAdultNames(newArr);
-                    }}
-                  />
-
-                  <input
-                    className={WeddingRSVPFormStyle.input}
-                    placeholder="Αλλεργίες"
-                    value={adultAllergies[i]}
-                    onChange={(e) => {
-                      const arr = [...adultAllergies];
-                      arr[i] = e.target.value;
-                      setAdultAllergies(arr);
-                    }}
-                  />
-
-                  <select
-                    className={WeddingRSVPFormStyle.input}
-                    value={adultDiet[i]}
-                    onChange={(e) => {
-                      const arr = [...adultDiet];
-                      arr[i] = e.target.value;
-                      setAdultDiet(arr);
-                    }}
-                  >
-                    <option value="">Καμία</option>
-                    <option value="vegetarian">Χορτοφάγος</option>
-                    <option value="vegan">Vegan</option>
-                  </select>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Children */}
-          {attending && (
-            <div className={WeddingRSVPFormStyle.section}>
-              <label className={WeddingRSVPFormStyle.label}>
-                Αριθμός παιδιών
-              </label>
-
-              <div className={WeddingRSVPFormStyle.counterControls}>
-                <button type="button" onClick={() => updateChildren(Math.max(0, children - 1))}>−</button>
-                <span>{children}</span>
-                <button type="button" onClick={() => updateChildren(children + 1)}>+</button>
-              </div>
-
-              {children > 0 && (
-                <>
-                  <label className={WeddingRSVPFormStyle.label}>
-                    Θα έχετε καρότσι μαζί σας;
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <label className={WeddingRSVPFormStyle.customRadio}>
+                    <input type="radio" name="attending" onChange={() => setAttending(true)} />
+                    <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
                   </label>
 
-                  <div style={{ display: "flex", gap: "10px" }}>
-                    <label className={WeddingRSVPFormStyle.customRadio}>
-                      <input type="radio" name="cart" onChange={() => setBabyCart(true)} />
-                      <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
-                    </label>
+                  <label className={WeddingRSVPFormStyle.customRadio}>
+                    <input type="radio" name="attending" onChange={() => setAttending(false)} />
+                    <div className={WeddingRSVPFormStyle.radioButton}>Όχι</div>
+                  </label>
+                </div>
+              </div>
 
-                    <label className={WeddingRSVPFormStyle.customRadio}>
-                      <input type="radio" name="cart" onChange={() => setBabyCart(false)} />
-                      <div className={WeddingRSVPFormStyle.radioButton}>Όχι</div>
-                    </label>
+              {/* Adults */}
+              {attending && (
+                <div className={WeddingRSVPFormStyle.section}>
+                  <label className={WeddingRSVPFormStyle.label}>
+                    Αριθμός ενηλίκων
+                  </label>
+
+                  <div className={WeddingRSVPFormStyle.counterControls}>
+                    <button type="button" onClick={() => updateAdults(Math.max(0, adults - 1))}>−</button>
+                    <span>{adults}</span>
+                    <button type="button" onClick={() => updateAdults(adults + 1)}>+</button>
                   </div>
-                </>
+
+                  {adultNames.map((name, i) => (
+                    <div key={i}>
+                      <input
+                        className={WeddingRSVPFormStyle.input}
+                        placeholder={`Ονοματεπώνυμο #${i + 1}`}
+                        value={name}
+                        onChange={(e) => {
+                          const newArr = [...adultNames];
+                          newArr[i] = e.target.value;
+                          setAdultNames(newArr);
+                        }}
+                      />
+
+                      <input
+                        className={WeddingRSVPFormStyle.input}
+                        placeholder="Αλλεργίες"
+                        value={adultAllergies[i]}
+                        onChange={(e) => {
+                          const arr = [...adultAllergies];
+                          arr[i] = e.target.value;
+                          setAdultAllergies(arr);
+                        }}
+                      />
+
+                      <select
+                        className={WeddingRSVPFormStyle.input}
+                        value={adultDiet[i]}
+                        onChange={(e) => {
+                          const arr = [...adultDiet];
+                          arr[i] = e.target.value;
+                          setAdultDiet(arr);
+                        }}
+                      >
+                        <option value="">Καμία</option>
+                        <option value="vegetarian">Χορτοφάγος</option>
+                        <option value="vegan">Vegan</option>
+                      </select>
+                    </div>
+                  ))}
+                </div>
               )}
 
-              {childNames.map((_, i) => (
-                <div key={i}>
-                  <input
-                    className={WeddingRSVPFormStyle.input}
-                    placeholder={`Αλλεργίες παιδιού #${i + 1}`}
-                    value={childAllergies[i]}
-                    onChange={(e) => {
-                      const arr = [...childAllergies];
-                      arr[i] = e.target.value;
-                      setChildAllergies(arr);
-                    }}
-                  />
+              {/* Children */}
+              {attending && (
+                <div className={WeddingRSVPFormStyle.section}>
+                  <label className={WeddingRSVPFormStyle.label}>
+                    Αριθμός παιδιών
+                  </label>
 
-                  <select
-                    className={WeddingRSVPFormStyle.input}
-                    value={childDiet[i]}
-                    onChange={(e) => {
-                      const arr = [...childDiet];
-                      arr[i] = e.target.value;
-                      setChildDiet(arr);
-                    }}
-                  >
-                    <option value="">Καμία</option>
-                    <option value="vegetarian">Χορτοφάγος</option>
-                    <option value="vegan">Vegan</option>
-                  </select>
+                  <div className={WeddingRSVPFormStyle.counterControls}>
+                    <button type="button" onClick={() => updateChildren(Math.max(0, children - 1))}>−</button>
+                    <span>{children}</span>
+                    <button type="button" onClick={() => updateChildren(children + 1)}>+</button>
+                  </div>
+
+                  {children > 0 && (
+                    <>
+                      <label className={WeddingRSVPFormStyle.label}>
+                        Θα έχετε καρότσι μαζί σας;
+                      </label>
+
+                      <div style={{ display: "flex", gap: "10px" }}>
+                        <label className={WeddingRSVPFormStyle.customRadio}>
+                          <input type="radio" name="cart" onChange={() => setBabyCart(true)} />
+                          <div className={WeddingRSVPFormStyle.radioButton}>Ναι</div>
+                        </label>
+
+                        <label className={WeddingRSVPFormStyle.customRadio}>
+                          <input type="radio" name="cart" onChange={() => setBabyCart(false)} />
+                          <div className={WeddingRSVPFormStyle.radioButton}>Όχι</div>
+                        </label>
+                      </div>
+                    </>
+                  )}
+
+                  {childNames.map((_, i) => (
+                    <div key={i}>
+                      <input
+                        className={WeddingRSVPFormStyle.input}
+                        placeholder={`Αλλεργίες παιδιού #${i + 1}`}
+                        value={childAllergies[i]}
+                        onChange={(e) => {
+                          const arr = [...childAllergies];
+                          arr[i] = e.target.value;
+                          setChildAllergies(arr);
+                        }}
+                      />
+
+                      <select
+                        className={WeddingRSVPFormStyle.input}
+                        value={childDiet[i]}
+                        onChange={(e) => {
+                          const arr = [...childDiet];
+                          arr[i] = e.target.value;
+                          setChildDiet(arr);
+                        }}
+                      >
+                        <option value="">Καμία</option>
+                        <option value="vegetarian">Χορτοφάγος</option>
+                        <option value="vegan">Vegan</option>
+                      </select>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              )}
+
+              {/* Songs */}
+              <div className={WeddingRSVPFormStyle.section}>
+                <label className={WeddingRSVPFormStyle.label}>
+                  Προτάσεις τραγουδιών
+                </label>
+                <input
+                  className={WeddingRSVPFormStyle.input}
+                  placeholder="Προτείνετε τραγούδια για το γλέντι"
+                  value={songs}
+                  onChange={(e) => setSongs(e.target.value)}
+                />
+              </div>
+
+              <button
+                className={WeddingRSVPFormStyle.submitButton}
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Αποστολή..." : "Υποβολή"}
+              </button>
+            </form>
           )}
-
-          {/* Songs */}
-          <div className={WeddingRSVPFormStyle.section}>
-            <label className={WeddingRSVPFormStyle.label}>
-              Προτάσεις τραγουδιών
-            </label>
-            <input
-              className={WeddingRSVPFormStyle.input}
-              placeholder="Προτείνετε τραγούδια για το γλέντι"
-              value={songs}
-              onChange={(e) => setSongs(e.target.value)}
-            />
-          </div>
-
-          <button
-            className={WeddingRSVPFormStyle.submitButton}
-            type="submit"
-            disabled={loading}
-          >
-            {loading ? "Αποστολή..." : "Υποβολή"}
-          </button>
-        </form>
-      )}
+        </div>
+      </div>
     </div>
   );
 };
