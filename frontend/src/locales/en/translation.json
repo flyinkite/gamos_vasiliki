@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "info": "Information",
+    "rsvp": "RSVP"
+  },
+
+  "index": {
+    "saveTheDate": "Save the date",
+    "name1": "Vasiliki",
+    "name2": "Stathis",
+    "date": "26/09/2026, Time 19:00",
+    "message": "Together we begin our next chapter and we would love for you to be part of our story.",
+    "cta": "RSVP"
+  },
+
+  "information": {
+    "title_location": "Location",
+    "church": "Church of Saints Constantine and Helen",
+    "venue": "Ivelia Estate, Lamptres, Koropi, 16672",
+    "open_maps": "Open in Maps",
+
+    "title_families": "The Families",
+    "family1": "Ira & Xenofon Lambrakis",
+    "family2": "Kyriakoula & Evangelos Kourtis",
+
+    "title_koumbaroi": "Best Man & Maid of Honor",
+    "koumbaros1": "Vera Triantafyllidi",
+    "koumbaros2": "Giannis Papantonakis",
+
+    "info_text": "After the ceremony, we invite you to celebrate with us at the estate. Please confirm your attendance by 10/07/26 using the form or by phone:",
+
+    "phone1": "Vasiliki: 6973941825",
+    "phone2": "Stathis: 6942661719"
+  },
+
+  "common": {
+    "yes": "Yes",
+    "no": "No"
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Please respond by 10/07/26",
+    "success": "Thank you! Your response has been recorded",
+
+    "attending": "Will you attend?",
+    "adults": "Number of adults",
+    "children": "Number of children",
+    "babyCart": "Will you bring a stroller?",
+
+    "fullName": "Full name",
+    "allergies": "Allergies",
+    "childAllergies": "Child allergies",
+
+    "none": "None",
+    "vegetarian": "Vegetarian",
+    "vegan": "Vegan",
+
+    "songs": "Song suggestions",
+    "songsPlaceholder": "Suggest songs that excite you!",
+
+    "submit": "Submit",
+    "submitting": "Submitting...",
+
+    "errors": {
+      "attending": "Please select if you will attend",
+      "adults": "Please add at least one adult",
+      "names": "Please fill in all adult names",
+      "submit": "Submission error"
+    }
+  }
+}

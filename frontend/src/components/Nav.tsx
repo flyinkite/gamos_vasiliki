@@ -3,15 +3,22 @@ import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 export const Nav = () => {
+  const { t, i18n } = useTranslation();
+
   const routes = [
-    { label: "Αρχική", path: "/" },
-    { label: "Πληροφορίες", path: "/information" },
-    { label: "RSVP", path: "/rsvp" },
+    { label: t("nav.home"), path: "/" },
+    { label: t("nav.info"), path: "/information" },
+    { label: t("nav.rsvp"), path: "/rsvp" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
 
   return (
     <nav className={navStyle.nav}>
@@ -22,8 +29,36 @@ export const Nav = () => {
           Β<span>&</span>Σ
         </NavLink>
 
-        <div className={navStyle.menuIcon} onClick={() => setIsOpen(!isOpen)}>
-          <GiHamburgerMenu />
+        <div className={navStyle.rightControls}>
+          
+          {/* Language buttons */}
+          <div className={navStyle.langSwitch}>
+            <button
+              onClick={() => changeLanguage("el")}
+              className={classNames(navStyle.langBtn, {
+                [navStyle.activeLang]: i18n.language === "el"
+              })}
+            >
+              GR
+            </button>
+            <button
+              onClick={() => changeLanguage("en")}
+              className={classNames(navStyle.langBtn, {
+                [navStyle.activeLang]: i18n.language === "en"
+              })}
+            >
+              EN
+            </button>
+          </div>
+
+          {/* Hamburger */}
+          <div
+            className={navStyle.menuIcon}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <GiHamburgerMenu />
+          </div>
+
         </div>
       </div>
 

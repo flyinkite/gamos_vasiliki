@@ -1,22 +1,35 @@
 import { Link } from "react-router-dom";
 import indexStyle from "./Index.module.css";
+import { useTranslation } from "react-i18next";
 
 export const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={indexStyle.hero}>
       <div className={indexStyle.svgFrame}>
         <div className={indexStyle.wrapper}>
+          
           <p className={indexStyle.p_header}>
-            Save the date
+            {t("index.saveTheDate")}
           </p>
-          <p className={indexStyle.date}>Βασιλική <span className={indexStyle.span}>&</span> Στάθης</p>
-          <p className={indexStyle.place}>26/09/2026, Ώρα 19:00</p>
+
+          <p className={indexStyle.date}>
+            {t("index.name1")} <span>&</span> {t("index.name2")}
+          </p>
+
+          <p className={indexStyle.place}>
+            {t("index.date")}
+          </p>
+
           <p className={indexStyle.p}>
-            Μαζί γράφουμε το επόμενο κεφάλαιο και θα χαρούμε να είστε μέρος της ιστορίας μας.
+            {t("index.message")}
           </p>
+
           <Link className={indexStyle.button} to="/rsvp">
-            Φόρμα
+            {t("index.cta")}
           </Link>
+
           <svg className={indexStyle.svgMain}></svg>
         </div>
       </div>

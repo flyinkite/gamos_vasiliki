@@ -110,3 +110,35 @@
     gap: 10px;
   }
 }
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.langSwitch {
+  display: flex;
+  gap: 6px;
+}
+
+.langBtn {
+  border: 1px solid #8f4600;
+  background: transparent;
+  color: #8f4600;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.langBtn:hover {
+  background-color: white;
+  color: #CC5500;
+}
+
+.activeLang {
+  background-color: #8f4600;
+  color: white;
+}
