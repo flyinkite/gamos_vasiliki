@@ -258,17 +258,19 @@ export const WeddingRSVPForm = () => {
               )}
 
               {/* Songs */}
-              <div className={WeddingRSVPFormStyle.section}>
-                <label className={WeddingRSVPFormStyle.label}>
-                  {t("rsvp.songs")}
-                </label>
-                <input
-                  className={WeddingRSVPFormStyle.input}
-                  placeholder={t("rsvp.songsPlaceholder")}
-                  value={songs}
-                  onChange={(e) => setSongs(e.target.value)}
-                />
-              </div>
+              {attending && (
+                <div className={WeddingRSVPFormStyle.section}>
+                  <label className={WeddingRSVPFormStyle.label}>
+                    {t("rsvp.songs")}
+                  </label>
+                  <input
+                    className={WeddingRSVPFormStyle.input}
+                    placeholder={t("rsvp.songsPlaceholder")}
+                    value={songs}
+                    onChange={(e) => setSongs(e.target.value)}
+                  />
+                </div>
+              )}
 
               <button
                 className={WeddingRSVPFormStyle.submitButton}
