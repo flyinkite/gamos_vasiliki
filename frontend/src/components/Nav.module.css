@@ -18,7 +18,7 @@
 /* LOGO */
 .logo {
   font-family: 'MiamaLocal', cursive;
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: #b45309;
   text-decoration: none;
 }
@@ -118,36 +118,52 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .logo {
+    flex: 1;
+  }
+
+  .ul {
+    flex: 2;
+    justify-content: center;
+  }
+
+  .rightControls {
+    flex: 1;
+    justify-content: flex-end;
+  }
 }
 
 .rightControls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .langSwitch {
   display: flex;
   gap: 6px;
+  margin-right: 5px;
 }
 
 .langBtn {
   border: 1px solid #8f4600;
-  background: transparent;
+  background: white;
   color: #8f4600;
   font-size: 0.7rem;
-  padding: 4px 8px;
-  border-radius: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.25s ease;
 }
 
 .langBtn:hover {
-  background-color: white;
-  color: #CC5500;
+  background-color: #8f4600;
+  color: white;
 }
 
 .activeLang {
   background-color: #8f4600;
   color: white;
+  border-color: #8f4600;
 }
