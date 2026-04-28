@@ -105,12 +105,18 @@
     flex-direction: row;
     gap: 2.5rem;
     margin: 0;
-    align-items: center;
+    padding: 0;
+
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: 20px;
   }
 
   .topBar {
     justify-content: space-between;
     flex-direction: row;
+    display: flex;
+    align-items: center;
   }
 
   .nav {
@@ -123,14 +129,10 @@
     flex: 1;
   }
 
-  .ul {
-    flex: 2;
-    justify-content: center;
-  }
-
   .rightControls {
     flex: 1;
     justify-content: flex-end;
+    flex-shrink: 0;
   }
 }
 

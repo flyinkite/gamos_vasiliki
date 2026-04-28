@@ -29,6 +29,29 @@ export const Nav = () => {
           Β<span>&</span>Σ
         </NavLink>
 
+        {/* Menu */}
+        <ul
+          className={classNames(navStyle.ul, {
+            [navStyle.is_open]: isOpen,
+          })}
+        >
+          {routes.map((route) => (
+            <li key={route.path} className={navStyle.li}>
+              <NavLink
+                to={route.path}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  classNames(navStyle.link, {
+                    [navStyle.active]: isActive,
+                  })
+                }
+              >
+                {route.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
         <div className={navStyle.rightControls}>
           
           {/* Language buttons */}
@@ -61,29 +84,6 @@ export const Nav = () => {
 
         </div>
       </div>
-
-      {/* Menu */}
-      <ul
-        className={classNames(navStyle.ul, {
-          [navStyle.is_open]: isOpen,
-        })}
-      >
-        {routes.map((route) => (
-          <li key={route.path} className={navStyle.li}>
-            <NavLink
-              to={route.path}
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                classNames(navStyle.link, {
-                  [navStyle.active]: isActive,
-                })
-              }
-            >
-              {route.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
     </nav>
   );
 };
