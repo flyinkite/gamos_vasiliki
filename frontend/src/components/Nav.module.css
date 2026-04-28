@@ -41,7 +41,8 @@
   list-style: none;
   flex-direction: column;
   gap: 1.5rem;
-  margin-top: 20px;
+  margin-top: 15px;
+  padding: 0;
 }
 
 /* OPEN STATE */
@@ -60,7 +61,6 @@
   font-family: 'Lora', serif;
   color: #7c3f00;
   font-size: 1rem;
-  transition: 0.3s ease;
   position: relative;
 }
 
@@ -92,6 +92,10 @@
 
 /* DESKTOP */
 @media (min-width: 768px) {
+  .nav {
+    padding: 6px 20px;
+  }
+
   .menuIcon {
     display: none;
   }
@@ -99,22 +103,27 @@
   .ul {
     display: flex !important;
     flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 10px;
+    gap: 2.5rem;
+    margin: 0;
+    align-items: center;
   }
 
   .topBar {
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 .rightControls {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .langSwitch {
