@@ -2,18 +2,20 @@
   position: relative;
   z-index: 1;
 
-  max-width: 768px;
+  width: 75%;
+  height: 75%;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+
+  gap: 1.2rem;
   margin: 0 auto;
 
   color: #7c3f00;
   font-weight: 400;
-
-  padding-top: 28%;
+  text-align: center;
 }
 
 .hero {
@@ -26,20 +28,22 @@
 
 /* SVG FRAME */
 .svgFrame {
-  position: absolute;
+  position: relative;   /* ❗ was absolute */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  width: 80vw;              /* bigger overall */
-  max-width: 600px;         /* prevents it from getting too huge */
+  width: 80vw;
+  max-width: 600px;
   aspect-ratio: 105 / 123.2;
 
   background: url("/flower.svg") no-repeat center;
   background-size: contain;
 
-  opacity: 0;               /* start hidden for animation */
-  z-index: 0;
+  margin: 0 auto;
 
+  opacity: 0;
   animation: fadeInFrame 1.6s ease forwards;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
 }
 
 .p_header {
@@ -81,19 +85,46 @@
   color: white;
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 768px) {
   .wrapper {
-    max-width: 90%;
-    padding-top: 28%;
+    padding-top: 0;
+    height: 70%;
+    width: 65%;
+    justify-content: center;
+    gap: 1rem;
+    transform: translateY(15%);
   }
 
   .svgFrame {
-    width: 85vw;
-    max-width: 380px;
+    width: 70vw;
+    max-width: 700px;
   }
   
   .p {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    max-width: 360px;
+    margin-bottom: 10px;
+  }
+
+  .date {
+    font-family: 'MiamaLocal', cursive;
+    font-size: 2.8rem;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+  }
+
+  .p_header {
+    font-size: 3.4rem;
+    margin-bottom: 10px;
+  }
+
+  .place {
+    margin-bottom: 15px;
+  }
+
+  .button {
+    margin-top: 10px;
   }
 }
 
