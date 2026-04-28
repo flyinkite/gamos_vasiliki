@@ -1,13 +1,13 @@
 .footer {
-  margin-top: 15px;
-  padding: 10px 5px;
+  margin-top: 0;
+  padding: 10px 0;
   background-color: #fffaf5;
   border-top: 1px solid #f1e4d8;
 }
 
 /* Container */
 .container {
-  max-width: 890px;
+  max-width: 768px;
   margin: 0 auto;
   text-align: center;
 }
@@ -34,13 +34,16 @@
   width: 50px;
   height: 2px;
   background-color: #b45309;
-  margin: 10px auto;
+  margin: 8px auto;
   opacity: 0.6;
 }
 
-/* Small text */
-.note {
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-  color: #7c3f00;
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
 }
