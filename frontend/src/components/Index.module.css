@@ -91,7 +91,7 @@
     height: auto;      /* remove forced vertical centering */
     gap: 1.5rem;
     justify-content: flex-start;
-    padding-top: 20%;
+    padding-top: 60%;
   }
 
   .svgFrame {
