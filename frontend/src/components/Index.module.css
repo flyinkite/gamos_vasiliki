@@ -92,6 +92,7 @@
     gap: 1.5rem;
     justify-content: flex-start;
     padding-top: 0;
+    padding-bottom: 0%;
   }
 
   .svgFrame {
