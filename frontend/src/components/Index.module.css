@@ -71,7 +71,6 @@
 @media (max-width: 767px) {
   .hero {
     width: 100%;
-    min-height: 100vh;
 
     align-items: flex-start;
 
