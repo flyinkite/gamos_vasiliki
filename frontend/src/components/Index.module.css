@@ -83,12 +83,12 @@
   .wrapper {
     width: 88%;
     gap: 1.2rem;
-    transform: translateY(180px);
+    transform: translateY(190px);
   }
 
   .p_header {
     font-size: 3.4rem;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .date {
@@ -102,16 +102,16 @@
   .p {
     font-size: 1.05rem;
     max-width: 360px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.4;
   }
 
   .place {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .button {
-    margin-top: 8px;
+    margin-top: 6px;
   }
 }
 
