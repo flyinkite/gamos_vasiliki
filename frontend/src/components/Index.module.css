@@ -72,17 +72,17 @@
   .hero {
     align-items: flex-start;
 
-    background: url("/flower_mobile.svg") no-repeat center 40px;
+    background: url("/flower_mobile.svg") no-repeat center top;
     background-size: 100% auto;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .wrapper {
     width: 88%;
     gap: 1.2rem;
-    transform: translateY(40px);
+    transform: translateY(60px);
   }
 
   .p_header {
