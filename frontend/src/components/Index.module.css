@@ -89,14 +89,21 @@
   .wrapper {
     width: 88%;        /* was ~75% → now wider */
     height: auto;      /* remove forced vertical centering */
-    gap: 1.5rem;
+    gap: 1.2rem;
     justify-content: flex-start;
     padding-top: 0;
+    transform: translateY(-5%);
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding-top: 40px;         
   }
 
   .svgFrame {
     width: 90vw;
     max-width: 380px;
+    transform: scaleY(0.95);
   }
 
   .p_header {
