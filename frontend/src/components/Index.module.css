@@ -118,6 +118,14 @@
     margin-bottom: 10px;
     line-height: 1.4;
   }
+
+  .place {
+    margin-bottom: 15px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
 }
 
 @media (min-width: 768px) {
