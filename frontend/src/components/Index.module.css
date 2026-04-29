@@ -70,9 +70,9 @@
 
 @media (max-width: 767px) {
   .hero {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    
+
     align-items: flex-start;
 
     background: url("/flower_mobile.svg") no-repeat center top;
