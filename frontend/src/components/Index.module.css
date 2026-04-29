@@ -88,7 +88,7 @@
 
   .p_header {
     font-size: 3.4rem;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .date {
@@ -102,16 +102,16 @@
   .p {
     font-size: 1.05rem;
     max-width: 360px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.4;
   }
 
   .place {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .button {
-    margin-top: 10px;
+    margin-top: 8px;
   }
 }
 
