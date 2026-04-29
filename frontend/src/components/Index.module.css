@@ -94,10 +94,7 @@
   }
 
   .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
     padding-top: 40px;
     padding-bottom: 40px;  
   }
