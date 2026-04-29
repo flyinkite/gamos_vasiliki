@@ -75,8 +75,8 @@
     background: url("/flower_mobile.svg") no-repeat center 40px;
     background-size: 100% auto;
 
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .wrapper {
