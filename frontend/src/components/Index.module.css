@@ -72,11 +72,9 @@
   .hero {
     align-items: flex-start;
 
-    /* ✅ mobile SVG */
-    background: url("/flower_mobile.svg") no-repeat center top;
+    background: url("/flower_mobile.svg") no-repeat center 40px;
     background-size: 100% auto;
 
-    /* ✅ spacing control */
     padding-top: 60px;
     padding-bottom: 40px;
   }
@@ -84,6 +82,7 @@
   .wrapper {
     width: 88%;
     gap: 1.2rem;
+    transform: translateY(40px);
   }
 
   .p_header {
@@ -124,7 +123,7 @@
   .wrapper {
     width: 65%;
     gap: 1rem;
-    transform: translateY(15%);
+    transform: translateY(0);
   }
 
   .p {
