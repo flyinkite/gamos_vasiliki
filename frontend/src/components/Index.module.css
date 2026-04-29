@@ -3,7 +3,7 @@
   z-index: 1;
 
   width: 75%;
-  height: 75%;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -11,10 +11,8 @@
   align-items: center;
 
   gap: 1.2rem;
-  margin: 0 auto;
 
   color: #7c3f00;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -23,27 +21,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   min-height: 100vh;
-}
 
-/* SVG FRAME */
-.svgFrame {
-  position: relative;   /* ❗ was absolute */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 80vw;
-  max-width: 600px;
-  aspect-ratio: 105 / 123.2;
-
+  /* Desktop background */
   background: url("/flower.svg") no-repeat center;
   background-size: contain;
-
-  margin: 0 auto;
-
-  opacity: 0;
-  animation: fadeInFrame 1.6s ease forwards;
 }
 
 .p_header {
@@ -86,25 +69,21 @@
 }
 
 @media (max-width: 767px) {
-  .wrapper {
-    width: 88%;        /* was ~75% → now wider */
-    height: auto;      /* remove forced vertical centering */
-    gap: 1.2rem;
-    justify-content: center;
-  }
-
   .hero {
     align-items: flex-start;
-    padding-top: 120px;
-    padding-bottom: 40px;  
+
+    /* ✅ mobile SVG */
+    background: url("/flower_mobile.svg") no-repeat center top;
+    background-size: 100% auto;
+
+    /* ✅ spacing control */
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
 
-  .svgFrame {
-    background: url("/flower_mobile.svg") no-repeat center;
-    background-size: contain;
-    width: 100%;
-    max-width: 766px;
-    aspect-ratio: 1080 / 1500;
+  .wrapper {
+    width: 88%;
+    gap: 1.2rem;
   }
 
   .p_header {
@@ -137,24 +116,20 @@
 }
 
 @media (min-width: 768px) {
+  .hero {
+    background: url("/flower.svg") no-repeat center;
+    background-size: contain;
+  }
+
   .wrapper {
-    padding-top: 0;
-    height: 70%;
     width: 65%;
-    justify-content: center;
     gap: 1rem;
     transform: translateY(15%);
   }
 
-  .svgFrame {
-    width: 70vw;
-    max-width: 700px;
-  }
-  
   .p {
     font-size: 1.05rem;
     max-width: 360px;
-    margin-bottom: 10px;
   }
 
   .date {
@@ -162,20 +137,10 @@
     font-size: 2.8rem;
     font-style: normal;
     letter-spacing: 0.05em;
-    margin-bottom: 5px;
   }
 
   .p_header {
     font-size: 3.4rem;
-    margin-bottom: 10px;
-  }
-
-  .place {
-    margin-bottom: 15px;
-  }
-
-  .button {
-    margin-top: 10px;
   }
 }
 

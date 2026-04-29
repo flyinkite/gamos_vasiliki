@@ -7,31 +7,28 @@ export const Index = () => {
 
   return (
     <div className={indexStyle.hero}>
-      <div className={indexStyle.svgFrame}>
-        <div className={indexStyle.wrapper}>
-          
-          <p className={indexStyle.p_header}>
-            {t("index.saveTheDate")}
-          </p>
+      <div className={indexStyle.wrapper}>
+        
+        <p className={indexStyle.p_header}>
+          {t("index.saveTheDate")}
+        </p>
 
-          <p className={indexStyle.date}>
-            {t("index.name1")} <span>&</span> {t("index.name2")}
-          </p>
+        <p className={indexStyle.date}>
+          {t("index.name1")} <span>&</span> {t("index.name2")}
+        </p>
 
-          <p className={indexStyle.place}>
-            {t("index.date")}
-          </p>
+        <p className={indexStyle.place}>
+          {t("index.date")}
+        </p>
 
-          <p className={indexStyle.p}>
-            {t("index.message")}
-          </p>
+        <p className={indexStyle.p}>
+          {t("index.message")}
+        </p>
 
-          <Link className={indexStyle.button} to="/rsvp">
-            {t("index.cta")}
-          </Link>
+        <Link className={indexStyle.button} to="/rsvp">
+          {t("index.cta")}
+        </Link>
 
-          <svg className={indexStyle.svgMain}></svg>
-        </div>
       </div>
     </div>
   );
