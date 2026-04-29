@@ -70,13 +70,15 @@
 
 @media (max-width: 767px) {
   .hero {
+    width: 100vw;
+    min-height: 100vh;
+    
     align-items: flex-start;
 
     background: url("/flower_mobile.svg") no-repeat center top;
     background-size: 100% 100%;
 
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .wrapper {
