@@ -15,7 +15,6 @@
   background-size: cover;
 
   pointer-events: none;
-  z-index: -1;
 }
 
 @media (min-width: 768px) {
