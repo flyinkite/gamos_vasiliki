@@ -6,17 +6,18 @@
 
 .main::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
 
-  background: url("/orange_background_mobile.svg") no-repeat right center;
-  background-size: 100%;
+  background: url("/orange_background_mobile.svg") no-repeat center top;
+  background-size: cover;
   pointer-events: none;
   z-index: -1;
 }
 
 @media (min-width: 768px) {
   .main::before {
+    position: absolute;
     background:url("/orange_background_desktop.svg") no-repeat right center;
     background-size: 100%;
   }
@@ -37,6 +38,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  opacity: 0.9;
 }
 
 .outerWrapper {
