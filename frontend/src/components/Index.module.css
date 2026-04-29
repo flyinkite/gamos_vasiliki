@@ -90,19 +90,21 @@
     width: 88%;        /* was ~75% → now wider */
     height: auto;      /* remove forced vertical centering */
     gap: 1.2rem;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero {
-    align-items: flex-start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 40px;
-    padding-bottom: 0;  
+    padding-bottom: 40px;  
   }
 
   .svgFrame {
     width: 90vw;
     max-width: 380px;
-    margin-bottom: auto;
   }
 
   .p_header {
