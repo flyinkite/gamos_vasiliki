@@ -3,6 +3,7 @@
   padding: 10px 0;
   background-color: #fffaf5;
   border-top: 1px solid #f1e4d8;
+  z-index: 1;
 }
 
 /* Container */
