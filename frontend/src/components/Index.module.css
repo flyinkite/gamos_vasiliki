@@ -100,6 +100,8 @@
   }
 
   .svgFrame {
+    background: url("/flower_mobile.svg") no-repeat center;
+    background-size: contain;
     width: 90vw;
     max-width: 380px;
   }
