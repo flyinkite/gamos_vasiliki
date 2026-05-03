@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://gamos-vasiliki.vercel.app",
+    origin: "https://vasiliki-stathis.vercel.app",
     credentials: true,
   })
 );
