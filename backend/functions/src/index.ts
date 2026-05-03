@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import { router } from "./routes";
+import router from "./routes";
 
 dotenv.config();
 
@@ -31,7 +31,7 @@ app.get("/api/health", (req, res) => {
 });
 
 /* Your existing routes */
-app.use("/", router);
+app.use("/api", router);
 
 const PORT = process.env.PORT || 3000;
 

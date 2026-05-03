@@ -3,6 +3,6 @@ import { createAttendance } from "../controllers/AttendanceController";
 
 const router = express.Router();
 
-router.post("/api/attendances", createAttendance);
+router.post("/attendances", createAttendance);
 
-export { router };
+export default router;
