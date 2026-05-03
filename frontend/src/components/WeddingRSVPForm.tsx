@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 export const WeddingRSVPForm = () => {
   const { t } = useTranslation();
 
+  const [declinedName, setDeclinedName] = useState("");
+
   const [attending, setAttending] = useState<boolean | null>(null);
 
   const [adults, setAdults] = useState(0);
@@ -57,6 +59,10 @@ export const WeddingRSVPForm = () => {
       return alert(t("rsvp.errors.names"));
     }
 
+    if (attending === false && !declinedName.trim()) {
+      return alert("Please enter your name");
+    }
+
     setLoading(true);
 
     try {
@@ -77,6 +83,7 @@ export const WeddingRSVPForm = () => {
             childAllergies,
             childDiet,
             songs,
+            declinedName,
           }),
         }
       );
@@ -273,6 +280,20 @@ export const WeddingRSVPForm = () => {
                     placeholder={t("rsvp.songsPlaceholder")}
                     value={songs}
                     onChange={(e) => setSongs(e.target.value)}
+                  />
+                </div>
+              )}
+
+              {attending === false && (
+                <div className={WeddingRSVPFormStyle.section}>
+                  <label className={WeddingRSVPFormStyle.label}>
+                    {t("rsvp.yourName")}
+                  </label>
+                  <input
+                    className={WeddingRSVPFormStyle.input}
+                    placeholder={t("rsvp.fullName")}
+                    value={declinedName}
+                    onChange={(e) => setDeclinedName(e.target.value)}
                   />
                 </div>
               )}
