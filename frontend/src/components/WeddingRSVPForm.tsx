@@ -81,11 +81,16 @@ export const WeddingRSVPForm = () => {
         }
       );
 
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const text = await res.text();
+        console.error("API ERROR:", text);
+        throw new Error(text || "Request failed");
+      }
 
       setSubmitted(true);
-    } catch (err) {
-      alert(t("rsvp.errors.submit"));
+    } catch (err: any) {
+      console.error(err);
+      alert(err.message || t("rsvp.errors.submit"));
     } finally {
       setLoading(false);
     }
