@@ -7,9 +7,15 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = [
+  "https://vasiliki-stathis.vercel.app",
+  "https://gamos-vasiliki-git-main-flyinkites-projects.vercel.app",
+  "https://gamos-vasiliki-e5th70xub-flyinkites-projects.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "https://vasiliki-stathis.vercel.app",
+    origin: allowedOrigins,
     credentials: true,
   })
 );
