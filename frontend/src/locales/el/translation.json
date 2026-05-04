@@ -7,6 +7,11 @@
     "rsvp": "Φόρμα"
   },
 
+    "footer": {
+      "name1": "Βασιλική",
+      "name2": "Στάθης"
+    },
+
   "index": {
     "saveTheDate": "Save the date",
     "name1": "Βασιλική",
