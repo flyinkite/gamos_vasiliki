@@ -15,9 +15,9 @@
 
 /* Names */
 .names {
-  font-family: 'MiamaLocal', cursive;
-  font-size: 2rem;
-  color: #b45309;
+  font-family: 'SnellRoundhand', cursive;
+  font-size: 1.4rem;
+  color: #8f4600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
 .divider {
   width: 50px;
   height: 2px;
-  background-color: #b45309;
+  background-color: #8f4600;
   margin: 8px auto;
   opacity: 0.6;
 }

@@ -7,32 +7,40 @@
 
 @font-face {
   font-family: "MiamaLocal";
-  src: url("./fonts/Miama/Miama.ttf") format("truetype");
+  src: url("./fonts/MonteCarlo/MonteCarlo-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSerifDisplay';
-  src: url('./fonts/Noto_Serif_Display/static/NotoSerifDisplay-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'SnellRoundhand';
+  src: url('./fonts/Snell_Roundhand/snellroundhand_bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corsiva';
+  src: url('./fonts/Monotype_Corsiva/Monotype-Corsiva-Regular-Italic.ttf') format('truetype');
+  font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 /* Base typography */
 body {
-  font-family: 'NotoSerifDisplay', serif;
-  color: #2c2c2c;
-  line-height: 1.6;
-  background-color: #fffaf5; /* soft elegant background */
+  font-family: 'Corsiva', cursive;
+  font-style: italic;
+  font-size: 1.4rem;
 }
 
 /* Headings */
 h1, h2, h3 {
-  font-family: 'MiamaLocal', cursive;
+  font-family: 'SnellRoundhand', cursive;
   font-weight: normal;
-  color: #b45309; /* burnt orange tone */
+  color: #8f4600;
 }
 
 h1, h2 {
@@ -40,5 +48,5 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
 }

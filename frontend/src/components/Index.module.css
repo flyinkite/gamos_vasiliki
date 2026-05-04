@@ -1,3 +1,7 @@
+/* =========================
+   LAYOUT
+========================= */
+
 .wrapper {
   position: relative;
   z-index: 1;
@@ -7,13 +11,13 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   gap: 1.2rem;
 
-  color: #7c3f00;
   text-align: center;
+  color: #8f4600;
 }
 
 .hero {
@@ -24,42 +28,58 @@
 
   min-height: 100vh;
 
-  /* Desktop background */
   background: url("/flower.svg") no-repeat center;
   background-size: contain;
 }
 
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+/* Title */
 .p_header {
   font-family: 'MiamaLocal', cursive;
   font-size: 3rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: #8f4600;
 }
 
-.p {
-  text-align: center;
+/* Date + headings */
+.date {
+  font-family: 'SnellRoundhand', cursive;
+  font-size: 2.4rem;
   letter-spacing: 0.05em;
-  font-size: 1rem;
+}
+
+/* Place (secondary heading) */
+.place {
+  font-family: 'SnellRoundhand', cursive;
+  letter-spacing: 0.08em;
+}
+
+/* Main text */
+.p {
+  font-family: 'Corsiva', cursive;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
   max-width: 500px;
 }
 
-.date {
-  font-weight: 600;
-  font-style: italic;
-}
 
-.place {
-  font-style: italic;
-  letter-spacing: 0.1em;
-}
+/* =========================
+   COMPONENTS
+========================= */
 
 .button {
-  z-index: 2;
-  border: 1px solid #b45309;
+  border: 1px solid #8f4600;
   padding: 0.6rem 2rem;
   border-radius: 20px;
+
   text-decoration: none;
-  color: #b45309;
+  color: #8f4600;
+
   transition: 0.3s ease;
 }
 
@@ -68,89 +88,79 @@
   color: white;
 }
 
-@media (max-width: 767px) {
-  .hero {
-    width: 100%;
 
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  .hero {
     align-items: flex-start;
 
     background: url("/flower_mobile.svg") no-repeat center top;
     background-size: 100% 100%;
-
-    padding: 0;
   }
 
   .wrapper {
     width: 88%;
-    gap: 1.2rem;
-    transform: translateY(200px);
+    transform: translateY(180px);
   }
 
   .p_header {
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     margin-bottom: 4px;
   }
 
   .date {
-    font-family: 'MiamaLocal', cursive;
-    font-size: 2.2rem;
-    font-style: normal;
-    letter-spacing: 0.05em;
+    font-size: 2rem;
     margin-bottom: 2px;
   }
 
   .p {
     font-size: 1.05rem;
-    max-width: 360px;
-    margin-bottom: 4px;
-    line-height: 1.4;
+    max-width: 320px;
+    line-height: 1.5;
   }
 
   .place {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .button {
-    margin-top: 4px;
+    margin-top: 6px;
   }
 }
 
+
+/* =========================
+   DESKTOP
+========================= */
+
 @media (min-width: 768px) {
-  .hero {
-    background: url("/flower.svg") no-repeat center;
-    background-size: contain;
-  }
 
   .wrapper {
     width: 65%;
     gap: 1rem;
-    transform: translateY(0);
-  }
-
-  .p {
-    font-size: 1.05rem;
-    max-width: 360px;
-  }
-
-  .date {
-    font-family: 'MiamaLocal', cursive;
-    font-size: 2.8rem;
-    font-style: normal;
-    letter-spacing: 0.05em;
   }
 
   .p_header {
-    font-size: 3.4rem;
+    font-size: 2.8rem;
+    margin-bottom: -1rem;
+    margin-top: 2rem;
   }
-}
 
-@keyframes fadeInFrame {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
+  .date {
+    font-size: 2.8rem;
   }
-  to {
-    opacity: 0.85;
-    transform: scale(1);
+
+  .place {
+    font-size: 1.5rem;
+  }
+
+  .p {
+    font-size: 1.5rem;
+    max-width: 350px;
+    margin-top: 1.3rem;
   }
 }

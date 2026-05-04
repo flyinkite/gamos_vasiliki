@@ -17,9 +17,9 @@
 
 /* LOGO */
 .logo {
-  font-family: 'MiamaLocal', cursive;
+  font-family: 'SnellRoundhand', cursive;
   font-size: 2.4rem;
-  color: #b45309;
+  color: #8f4600;
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@
 .menuIcon {
   font-size: 1.5rem;
   cursor: pointer;
-  color: #b45309;
+  color: #8f4600;
 }
 
 /* MENU */
@@ -58,9 +58,9 @@
 /* LINKS */
 .link {
   text-decoration: none;
-  font-family: 'Lora', serif;
-  color: #7c3f00;
-  font-size: 1rem;
+  font-family: 'Corsiva', cursive;
+  color: #8f4600;
+  font-size: 1.5rem;
   position: relative;
 }
 
@@ -71,7 +71,7 @@
   height: 1px;
   bottom: -3px;
   left: 0;
-  background-color: #b45309;
+  background-color: #8f4600;
   transition: 0.3s;
 }
 
@@ -81,12 +81,12 @@
 
 /* HOVER */
 .link:hover {
-  color: #b45309;
+  color: #8f4600;
 }
 
 /* ACTIVE */
 .active {
-  color: #b45309;
+  color: #8f4600;
   font-weight: 600;
 }
 
