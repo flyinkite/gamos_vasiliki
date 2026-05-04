@@ -114,10 +114,6 @@
   .is_open {
     transform: translateY(0);
   }
-
-  .logo {
-    font-size: 2rem;
-  }
 }
 
 /* DESKTOP */
