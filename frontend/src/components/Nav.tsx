@@ -26,7 +26,7 @@ export const Nav = () => {
       {/* Top bar */}
       <div className={navStyle.topBar}>
         <NavLink className={navStyle.logo} to="/">
-          Β<span>&</span>Σ
+          {t("nav.vasiliki")} <span>&</span> {t("nav.stathis")}
         </NavLink>
 
         {/* Menu */}
