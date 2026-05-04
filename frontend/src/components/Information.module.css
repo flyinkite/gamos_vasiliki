@@ -54,7 +54,7 @@
 
 /* Titles */
 .title {
-  font-family: 'MiamaLocal', cursive;
+  font-family: 'SnellRoundhand', cursive;
   font-size: 2.2rem;
   color: #8f4600;
   margin-bottom: 10px;
@@ -62,7 +62,7 @@
 
 /* Text */
 .text {
-  font-family: 'Lora', serif;
+  font-family: 'Corsiva', cursive;
   color: #8f4600;
   margin-bottom: 5px;
 }

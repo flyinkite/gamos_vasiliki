@@ -6,7 +6,7 @@
 
 .main::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
 
   background: url("/orange_background_mobile.svg") no-repeat center top;
@@ -38,7 +38,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .outerWrapper {
@@ -64,7 +64,7 @@ body {
 }
 
 .h1 {
-  font-family: 'MiamaLocal', cursive;
+  font-family: 'SnellRoundhand', cursive;
   font-size: 2rem;
   letter-spacing: 0.1em;
   color: #8f4600;
@@ -94,13 +94,13 @@ body {
 .submitButton {
   height: 50px;
   border-radius: 25px;
-  border: 1px solid #d97706;
+  border: 1px solid #8f4600;
 
   background-color: #ffdfbf;
   color: #8f4600;
 
   font-size: 16px;
-  font-family: 'Lora', serif;
+  font-family: 'SnellRoundhand', cursive;
 
   cursor: pointer;
   transition: all 0.25s ease;
@@ -108,7 +108,7 @@ body {
 
 /* hover */
 .submitButton:hover {
-  background-color: #d97706;
+  background-color: #8f4600;
   color: #ffdfbf;
 }
 
@@ -136,7 +136,7 @@ body {
   height: 45px;
   border-radius: 50%;
 
-  border: 1px solid #d97706;
+  border: 1px solid #8f4600;
   background: #ffdfbf;
   color: #8f4600;
 
@@ -146,7 +146,7 @@ body {
 }
 
 .counterControls button:hover {
-  background-color: #CC5500;
+  background-color: #8f4600;
   color: white;
 }
 
@@ -169,7 +169,7 @@ body {
 
 .input:focus {
   outline: none;
-  border-color: #d97706;
+  border-color: #8f4600;
   box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
 }
 
@@ -182,7 +182,7 @@ body {
   width: 120px;
   height: 45px;
   border-radius: 25px;
-  border: 1px solid #d97706;
+  border: 1px solid #8f4600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,13 +192,13 @@ body {
 }
 
 .customRadio input[type="radio"]:checked + .radioButton {
-  background-color: #d97706;
+  background-color: #8f4600;
   color: white;
-  border-color: #d97706;
+  border-color: #8f4600;
 }
 
 .customRadio:hover .radioButton {
-  border-color: #d97706;
+  border-color: #8f4600;
 }
 
 .createdAt {
