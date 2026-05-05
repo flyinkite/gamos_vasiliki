@@ -40,7 +40,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 18px;
   opacity: 0.8;
 }
 
@@ -54,7 +54,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .section:not(:last-child) {
@@ -85,7 +85,7 @@ body {
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .label {
@@ -95,18 +95,23 @@ body {
 }
 
 .submitButton {
-  height: 50px;
-  border-radius: 25px;
+  min-height: 42px;
+  padding: 8px 18px;
+
+  border-radius: 20px;
+
   border: 1px solid #8f4600;
 
   background-color: #ffdfbf;
   color: #8f4600;
 
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'SnellRoundhand', cursive;
 
   cursor: pointer;
   transition: all 0.25s ease;
+
+  align-self: center;
 }
 
 /* hover */
@@ -135,15 +140,15 @@ body {
 }
 
 .counterControls button {
-  width: 45px;
-  height: 45px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
 
   border: 1px solid #8f4600;
   background: #ffdfbf;
   color: #8f4600;
 
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -161,13 +166,13 @@ body {
 }
 
 .input {
-  height: 45px;
+  height: 38px;
   width: 100%;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 8px 10px;
   border: 1px solid #e5e7eb;
-  font-family: 'Lora', serif;
-  transition: 0.2s ease;
+  font-family: 'Corsiva', cursive;
+  transition: all 0.2s ease;
 }
 
 .input:focus {
