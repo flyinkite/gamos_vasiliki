@@ -11,6 +11,7 @@
 
   background: url("/orange_background_mobile.svg") no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
   pointer-events: none;
   z-index: -1;
 }
