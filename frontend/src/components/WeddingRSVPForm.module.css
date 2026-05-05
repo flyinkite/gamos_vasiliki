@@ -18,8 +18,10 @@
 @media (min-width: 768px) {
   .main::before {
     position: absolute;
-    background:url("/orange_background_desktop.svg") no-repeat right center;
-    background-size: 100%;
+    inset: 0;
+
+    background:url("/orange_background_desktop.svg") no-repeat center top;
+    background-size: cover;
   }
 }
 

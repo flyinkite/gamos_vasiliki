@@ -55,6 +55,11 @@
     "children": "Number of children",
     "babyCart": "Will you bring a stroller?",
 
+    "adultName": "Full name of adult",
+    "childName": "Full name of child",
+    "diet": "Dietary preference",
+    "declinedName": "Please enter your name",
+
     "fullName": "Full name",
     "allergies": "Allergies",
     "childAllergies": "Child allergies",
@@ -74,6 +79,8 @@
       "adults": "Please add at least one adult",
       "names": "Please fill in all adult names",
       "submit": "Submission error"
-    }
+    },
+
+    "yourName": "Your full name"
   }
 }
