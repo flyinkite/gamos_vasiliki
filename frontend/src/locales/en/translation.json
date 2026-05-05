@@ -60,6 +60,8 @@
     "diet": "Dietary preference",
     "declinedName": "Please enter your name",
 
+    "resubmitInfo": "If you need to change anything, please submit the form again.",
+
     "fullName": "Full name",
     "allergies": "Allergies",
     "childAllergies": "Child allergies",

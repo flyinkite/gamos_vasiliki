@@ -102,9 +102,15 @@ export const WeddingRSVPForm = () => {
           </div>
 
           {submitted ? (
-            <p className={WeddingRSVPFormStyle.createdAt}>
-              <FaCheck /> {t("rsvp.success")}
-            </p>
+            <>
+              <p className={WeddingRSVPFormStyle.createdAt}>
+                <FaCheck /> {t("rsvp.success")}
+              </p>
+
+              <p className={WeddingRSVPFormStyle.p}>
+                {t("rsvp.resubmitInfo")}
+              </p>
+            </>
           ) : (
             <form
               className={WeddingRSVPFormStyle.form}
