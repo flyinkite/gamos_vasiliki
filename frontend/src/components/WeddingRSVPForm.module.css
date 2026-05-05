@@ -26,6 +26,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  .input {
+    min-height: 50px;
+    font-size: 1.05rem;
+  }
+}
+
 .wrapper {
   max-width: 768px;
   margin: 0 auto;
@@ -174,8 +181,13 @@ body {
   font-family: 'Corsiva', cursive;
   font-size: 1rem;
   line-height: 1.4;
-  
+
   transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  font-size: 0.95rem;
+  opacity: 0.6;
 }
 
 .input:focus {
