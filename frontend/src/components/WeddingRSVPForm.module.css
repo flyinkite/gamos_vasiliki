@@ -2,15 +2,16 @@
   position: relative;
   z-index: 1;
   min-height: 100vh;
+
+  background: url("/orange_background_mobile.svg") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .main::before {
   content: "";
   position: absolute;
   inset: 0;
-
-  background: url("/orange_background_mobile.svg") no-repeat center top;
-  background-size: cover;
   pointer-events: none;
   z-index: -1;
 }
