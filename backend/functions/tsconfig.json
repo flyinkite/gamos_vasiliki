@@ -9,7 +9,7 @@
     "sourceMap": true,
     "strict": false,
     "rootDir": "./src",
-    "noImplicitAny": false,
+    "noImplicitAny": false
   },
   "compileOnSave": true,
   "include": [

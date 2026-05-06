@@ -1,9 +1,5 @@
 import { Request, Response } from "express";
 import { supabase } from "../../data-access";
-import { appendRow } from "../../services/googleSheets";
-
-const YES = "YES";
-const NO = "NO";
 
 export const createAttendance = async (req: Request, res: Response) => {
   try {
@@ -23,7 +19,7 @@ export const createAttendance = async (req: Request, res: Response) => {
     } = req.body;
 
     // ----------------------------
-    // 1. VALIDATION (FIRST THING)
+    // 1. VALIDATION
     // ----------------------------
     if (attending === null || attending === undefined) {
       return res.status(400).send("Missing attending");
@@ -33,12 +29,12 @@ export const createAttendance = async (req: Request, res: Response) => {
       return res.status(400).send("Name required for declined RSVP");
     }
 
-    if (attending && (!adultNames || adultNames.length === 0)) {
+    if (attending && adultNames.length === 0) {
       return res.status(400).send("At least one adult required");
     }
 
     // ----------------------------
-    // 2. INSERT RSVP (SUPABASE)
+    // 2. INSERT RSVP
     // ----------------------------
     const { data: rsvp, error: rsvpError } = await supabase
       .from("rsvps")
@@ -59,19 +55,11 @@ export const createAttendance = async (req: Request, res: Response) => {
       return res.sendStatus(500);
     }
 
-    const baseMeta = [
-      attending ? YES : NO,
-      attending ? adults : 0,
-      attending ? children : 0,
-      attending ? songs || "" : "",
-      attending ? (babyCart ? YES : NO) : "",
-    ];
-
     // ----------------------------
-    // 3. DECLINED FLOW
+    // 3. DECLINED
     // ----------------------------
     if (!attending) {
-      await supabase.from("guests").insert([
+      const { error } = await supabase.from("guests").insert([
         {
           name: declinedName,
           type: "declined",
@@ -79,17 +67,7 @@ export const createAttendance = async (req: Request, res: Response) => {
         },
       ]);
 
-      await appendRow([
-        NO,
-        0,
-        0,
-        "",
-        "",
-        declinedName,
-        "",
-        "",
-        "declined",
-      ]);
+      if (error) console.error("Declined insert error:", error);
 
       return res.status(200).json({ success: true });
     }
@@ -110,16 +88,6 @@ export const createAttendance = async (req: Request, res: Response) => {
       if (error) console.error("Adult insert error:", error);
     }
 
-    for (let i = 0; i < adultNames.length; i++) {
-      await appendRow([
-        ...baseMeta,
-        adultNames[i] || "",
-        adultAllergies?.[i] || "",
-        adultDiet?.[i] || "",
-        "adult",
-      ]);
-    }
-
     // ----------------------------
     // 5. CHILDREN
     // ----------------------------
@@ -136,16 +104,6 @@ export const createAttendance = async (req: Request, res: Response) => {
 
       const { error } = await supabase.from("guests").insert(childRows);
       if (error) console.error("Child insert error:", error);
-
-      for (let i = 0; i < children; i++) {
-        await appendRow([
-          ...baseMeta,
-          "",
-          childAllergies?.[i] || "",
-          childDiet?.[i] || "",
-          "child",
-        ]);
-      }
     }
 
     return res.status(200).json({ success: true });
