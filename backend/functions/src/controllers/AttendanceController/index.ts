@@ -8,7 +8,6 @@ export const createAttendance = async (req: Request, res: Response) => {
       adults,
       children,
       adultNames = [],
-      childNames = [],
       adultAllergies = [],
       adultDiet = [],
       childAllergies = [],
@@ -95,7 +94,7 @@ export const createAttendance = async (req: Request, res: Response) => {
       const childRows = Array(children)
         .fill(0)
         .map((_, i) => ({
-          name: childNames?.[i] || "",
+          name: `Child ${i + 1}`,
           type: "child",
           allergy: childAllergies?.[i] || null,
           diet: childDiet?.[i] || null,

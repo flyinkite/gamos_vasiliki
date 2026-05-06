@@ -14,7 +14,6 @@ export const WeddingRSVPForm = () => {
   const [children, setChildren] = useState(0);
 
   const [adultNames, setAdultNames] = useState<string[]>([]);
-  const [childNames, setChildNames] = useState<string[]>([]);
 
   const [babyCart, setBabyCart] = useState<boolean | null>(null);
 
@@ -39,7 +38,6 @@ export const WeddingRSVPForm = () => {
 
   const updateChildren = (count: number) => {
     setChildren(count);
-    setChildNames(Array(count).fill("").map((_, i) => childNames[i] || ""));
     setChildAllergies(Array(count).fill(""));
     setChildDiet(Array(count).fill(""));
   };
@@ -67,7 +65,6 @@ export const WeddingRSVPForm = () => {
             adults,
             children,
             adultNames,
-            childNames,
             babyCart,
             adultAllergies,
             adultDiet,
@@ -261,20 +258,13 @@ export const WeddingRSVPForm = () => {
                     </button>
                   </div>
 
-                  {childNames.map((_, i) => (
+                  {Array(children)
+                  .fill(0)
+                  .map((_, i) => (
                     <div key={i}>
                       <label className={WeddingRSVPFormStyle.label}>
-                        {t("rsvp.childName")} #{i + 1}
+                        {t("rsvp.child")} #{i + 1}
                       </label>
-                      <input
-                        className={WeddingRSVPFormStyle.input}
-                        value={childNames[i]}
-                        onChange={(e) => {
-                          const arr = [...childNames];
-                          arr[i] = e.target.value;
-                          setChildNames(arr);
-                        }}
-                      />
 
                       <label className={WeddingRSVPFormStyle.label}>
                         {t("rsvp.allergies")}

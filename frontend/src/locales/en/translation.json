@@ -57,6 +57,7 @@
 
     "adultName": "Full name of adult",
     "childName": "Full name of child",
+    "child": "Child",
     "diet": "Dietary preference",
     "declinedName": "Please enter your name",
 
