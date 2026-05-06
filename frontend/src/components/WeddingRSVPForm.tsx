@@ -261,7 +261,7 @@ export const WeddingRSVPForm = () => {
                   {Array(children)
                   .fill(0)
                   .map((_, i) => (
-                    <div key={i}>
+                    <div key={i} style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                       <label className={WeddingRSVPFormStyle.label}>
                         {t("rsvp.child")} #{i + 1}
                       </label>
