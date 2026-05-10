@@ -25,9 +25,15 @@ export const Index = () => {
           {t("index.message")}
         </p>
 
-        <Link className={indexStyle.button} to="/rsvp">
-          {t("index.cta")}
-        </Link>
+        <div className={indexStyle.buttonWrapper}>
+          <Link className={indexStyle.button} to="/rsvp">
+            {t("index.cta")}
+          </Link>
+
+          <Link className={indexStyle.button} to="/information">
+            {t("index.cta_info")}
+          </Link>
+        </div>
 
       </div>
     </div>

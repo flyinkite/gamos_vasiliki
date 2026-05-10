@@ -32,6 +32,13 @@
   background-size: contain;
 }
 
+.buttonWrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 
 /* =========================
    TYPOGRAPHY

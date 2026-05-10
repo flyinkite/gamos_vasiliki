@@ -18,7 +18,8 @@
     "name2": "Stathis",
     "date": "26/09/2026, Time 19:00",
     "message": "Together we begin our next chapter and we would love for you to be part of our story.",
-    "cta": "RSVP"
+    "cta": "RSVP",
+    "cta_info": "Information"
   },
 
   "information": {
