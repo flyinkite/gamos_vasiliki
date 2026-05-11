@@ -7,6 +7,11 @@ export const Index = () => {
 
   return (
     <div className={indexStyle.hero}>
+      <img
+        src="/flower_mobile_top.svg"
+        alt=""
+        className={indexStyle.mobileFlowerTop}
+      />
       <div className={indexStyle.wrapper}>
         
         <p className={indexStyle.p_header}>
@@ -36,6 +41,11 @@ export const Index = () => {
         </div>
 
       </div>
+      <img
+        src="/flower_mobile_bottom.svg"
+        alt=""
+        className={indexStyle.mobileFlowerBottom}
+      />
     </div>
   );
 };

@@ -103,15 +103,32 @@
 @media (max-width: 767px) {
 
   .hero {
-    align-items: flex-start;
+    background: none;
+    min-height: 100vh;
 
-    background: url("/flower_mobile.svg") no-repeat center top;
-    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobileFlowerTop {
+    width: 100%;
+    display: block;
+  }
+
+  .mobileFlowerBottom {
+    width: 100%;
+    display: block;
+
+    margin-top: 1.5rem;
   }
 
   .wrapper {
     width: 88%;
-    transform: translateY(180px);
+
+    transform: none;
+
+    gap: 1rem;
   }
 
   .p_header {
@@ -170,5 +187,10 @@
     font-size: 1.5rem;
     max-width: 350px;
     margin-top: 1.3rem;
+  }
+
+  .mobileFlowerTop,
+  .mobileFlowerBottom {
+    display: none;
   }
 }
