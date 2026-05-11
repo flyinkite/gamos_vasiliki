@@ -31,12 +31,12 @@ export const Index = () => {
         </p>
 
         <div className={indexStyle.buttonWrapper}>
-          <Link className={indexStyle.button} to="/rsvp">
-            {t("index.cta")}
-          </Link>
-
           <Link className={indexStyle.button} to="/information">
             {t("index.cta_info")}
+          </Link>
+
+          <Link className={indexStyle.button} to="/rsvp">
+            {t("index.cta")}
           </Link>
         </div>
 
