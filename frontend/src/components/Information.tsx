@@ -1,5 +1,6 @@
 import informationStyle from "./Information.module.css";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Information = () => {
   const { t } = useTranslation();
@@ -92,6 +93,12 @@ export const Information = () => {
             </p>
           </div>
 
+          <Link
+            to="/"
+            className={informationStyle.backButton}
+          >
+            {t("common.backHome")}
+          </Link>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import WeddingRSVPFormStyle from "./WeddingRSVPForm.module.css";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const WeddingRSVPForm = () => {
   const { t } = useTranslation();
@@ -107,6 +108,13 @@ export const WeddingRSVPForm = () => {
               <p className={WeddingRSVPFormStyle.p}>
                 {t("rsvp.resubmitInfo")}
               </p>
+
+              <Link
+                to="/"
+                className={WeddingRSVPFormStyle.backButton}
+              >
+                {t("common.backHome")}
+              </Link>
             </>
           ) : (
             <form

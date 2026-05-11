@@ -98,3 +98,24 @@
 .mapButton:hover {
   background-color: #8f4600;
 }
+
+.backButton {
+  border: 1px solid #8f4600;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  color: #8f4600;
+
+  transition: 0.3s ease;
+
+  align-self: center;
+
+  margin-top: 2rem;
+}
+
+.backButton:hover {
+  background-color: #8f4600;
+  color: white;
+}

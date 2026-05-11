@@ -44,7 +44,8 @@
 
   "common": {
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "backHome": "Back to Home"
   },
   "rsvp": {
     "title": "RSVP",
