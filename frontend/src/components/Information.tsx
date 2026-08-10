@@ -91,6 +91,10 @@ export const Information = () => {
             <p className={informationStyle.text}>
               {t("information.phone2")}
             </p>
+
+            <p className={informationStyle.text}>
+              {t("information.phone3")}
+            </p>
           </div>
 
           <Link
